@@ -3,6 +3,7 @@ import { createBrowserRouter, createRoutesFromElements, Route } from "react-rout
 import Root from "../components/Root/Root";
 import AdditionalInfo from "../components/AdditionalInfo/AdditionalInfo";
 import Confirmation from "../components/Confirmation/Confirmation";
+import Success from "../components/Success/Success";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -18,6 +19,10 @@ export const router = createBrowserRouter(
             <Route
                 path="confirmation"
                 element={<Confirmation />}
+            />
+            <Route
+                path="success"
+                element={<Success />}
             />
         </Route>
     )

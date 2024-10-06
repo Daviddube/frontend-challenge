@@ -21,7 +21,7 @@ const Confirmation = () => {
                 <Button mt="xl" mb="xl" mr="md" onClick={() => routeChange("/more-info")}>
                     BACK
                 </Button>
-                <Button mt="xl" mb="xl" onClick={() => routeChange("/")}>
+                <Button mt="xl" mb="xl" onClick={() => routeChange("/success")}> {/* to change to api call */}
                     SUBMIT
                 </Button>
             </Paper>
