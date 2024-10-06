@@ -24,8 +24,8 @@ const AdditionalInfo = () => {
                         placeholder="SELECT YOUR FAVORITE COLOR"
                         data={data}
                         pb="md"
-                        key={form.key('favoriteColor')}
-                        {...form.getInputProps('favoriteColor')}
+                        key={form.key('color')}
+                        {...form.getInputProps('color')}
                     />
                     <Checkbox
                         label={
@@ -37,8 +37,8 @@ const AdditionalInfo = () => {
                                 .
                             </>
                         }
-                        key={form.key('areTermsAccepted')}
-                        {...form.getInputProps('areTermsAccepted', { type: "checkbox" })}
+                        key={form.key('terms')}
+                        {...form.getInputProps('terms', { type: "checkbox" })}
                     />
                     <Button mt="xl" mb="xl" mr="md" onClick={() => routeChange("/")}>
                         BACK

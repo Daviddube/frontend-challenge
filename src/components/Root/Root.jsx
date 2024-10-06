@@ -19,8 +19,8 @@ const { form } = useContext(FormContext);
                     <TextInput
                         label="First Name"
                         placeholder="FIRST NAME"
-                        key={form.key('firstName')}
-                        {...form.getInputProps('firstName')}
+                        key={form.key('name')}
+                        {...form.getInputProps('name')}
                     >
                     </TextInput>
                     <TextInput

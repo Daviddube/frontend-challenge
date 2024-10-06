@@ -12,11 +12,11 @@ const App = () => {
   const form = useForm({
     mode: 'uncontrolled',
     initialValues: {
-      firstName: '',
+      name: '',
       email: '',
       password: '',
-      favoriteColor: '',
-      areTermsAccepted: false
+      color: '',
+      terms: false
     },
      validate: {
       email: isEmail('Invalid email')

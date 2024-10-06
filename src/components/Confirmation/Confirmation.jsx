@@ -1,7 +1,9 @@
-import { Button, Center, Paper, Text, Title } from "@mantine/core";
+import { Button, Center, LoadingOverlay, Paper, Text, Title } from "@mantine/core";
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormContext } from "../../App";
+import { useMutation } from "@tanstack/react-query";
+import { submitForm } from "../../apis/submitForm";
 
 const Confirmation = () => {
     let navigate = useNavigate();
@@ -11,18 +13,29 @@ const Confirmation = () => {
 
     const { form } = useContext(FormContext);
 
+    const mutation = useMutation({
+        mutationFn: submitForm
+    })
+
     return <>
         <Center>
-            <Paper shadow="xs" p="xl">
+            <Paper shadow="xs" p="xl" position="relative">
+                <LoadingOverlay visible={mutation.isPending} />
                 <Title>CONFIRMATION</Title>
-                <form onSubmit={form.onSubmit(() => {
-                    routeChange("/error");
+                <form onSubmit={form.onSubmit(({ name, email, password, color, terms }) => {
+                    mutation.mutate({
+                        name,
+                        email,
+                        password,
+                        color,
+                        terms
+                    })
                 })}>
-                    <Text>FIRST NAME: {form.getValues().firstName}</Text>
+                    <Text>FIRST NAME: {form.getValues().name}</Text>
                     <Text>E-MAIL: {form.getValues().email}</Text>
-                    <Text>PASSWORD: {form.getValues().password}</Text>
-                    <Text>FAVORITE COLOR: {form.getValues().favoriteColor}</Text>
-                    <Text>TERMS AND CONDITIONS: {form.getValues().areTermsAccepted.toString()}</Text>
+                    <Text>PASSWORD: *****</Text>
+                    <Text>FAVORITE COLOR: {form.getValues().color}</Text>
+                    <Text>TERMS AND CONDITIONS: {form.getValues().terms.toString()}</Text>
                     <Button mt="xl" mb="xl" mr="md" onClick={() => routeChange("/more-info")}>
                         BACK
                     </Button>
