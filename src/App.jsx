@@ -4,6 +4,7 @@ import React, { createContext } from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./navigation/router";
 import { isEmail, useForm } from "@mantine/form";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const FormContext = createContext(null);
 
@@ -17,15 +18,20 @@ const App = () => {
       favoriteColor: '',
       areTermsAccepted: false
     },
-    //  validate: {
-    //   email: isEmail('Invalid email')
-    // }
+     validate: {
+      email: isEmail('Invalid email')
+    }
 });
+
+const queryClient = new QueryClient()
+
   return (
     <MantineProvider>
-      <FormContext.Provider value={{form}}>
-        <RouterProvider router={router} />
-      </FormContext.Provider>
+      <QueryClientProvider client={queryClient}>
+        <FormContext.Provider value={{form}}>
+          <RouterProvider router={router} />
+        </FormContext.Provider>
+      </QueryClientProvider>
     </MantineProvider>
   );
 };

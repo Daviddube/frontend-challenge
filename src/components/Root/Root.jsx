@@ -15,7 +15,7 @@ const { form } = useContext(FormContext);
         <Center>
             <Paper shadow="xs" p="xl">
                 <Title>SIGN UP</Title>
-                <form>
+                <form onSubmit={form.onSubmit(routeChange)}>
                     <TextInput
                         label="First Name"
                         placeholder="FIRST NAME"
@@ -37,7 +37,7 @@ const { form } = useContext(FormContext);
                         {...form.getInputProps('password')}
                     >
                     </PasswordInput>
-                    <Button mt="xl" mb="xl" onClick={routeChange}>
+                    <Button mt="xl" mb="xl" type="submit">
                         NEXT
                     </Button>
                 </form>
