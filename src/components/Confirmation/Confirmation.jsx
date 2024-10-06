@@ -16,6 +16,13 @@ const Confirmation = () => {
     const mutation = useMutation({
         mutationFn: submitForm
     })
+    if(mutation.isError) {
+        routeChange("/error")
+    } else {
+        if(mutation.isSuccess) {
+            routeChange("/success")
+        }
+    }
 
     return <>
         <Center>
