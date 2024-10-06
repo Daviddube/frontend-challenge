@@ -40,7 +40,7 @@ const AdditionalInfo = () => {
                         key={form.key('terms')}
                         {...form.getInputProps('terms', { type: "checkbox" })}
                     />
-                    <Button mt="xl" mb="xl" mr="md" onClick={() => routeChange("/")}>
+                    <Button mt="xl" mb="xl" variant="subtle" mr="md" onClick={() => routeChange("/")}>
                         BACK
                     </Button>
                     <Button mt="xl" mb="xl" onClick={() => routeChange("/confirmation")}>

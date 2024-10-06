@@ -43,7 +43,7 @@ const Confirmation = () => {
                     <Text>PASSWORD: *****</Text>
                     <Text>FAVORITE COLOR: {form.getValues().color}</Text>
                     <Text>TERMS AND CONDITIONS: {form.getValues().terms.toString()}</Text>
-                    <Button mt="xl" mb="xl" mr="md" onClick={() => routeChange("/more-info")}>
+                    <Button mt="xl" mb="xl" mr="md" variant="subtle" onClick={() => routeChange("/more-info")}>
                         BACK
                     </Button>
                     <Button mt="xl" mb="xl" type="submit"> {/* to change to api call */}
