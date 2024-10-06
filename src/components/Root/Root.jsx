@@ -10,7 +10,7 @@ const navigate = useNavigate();
     return <>
         <Center>
             <Paper shadow="xs" p="xl">
-                <Title>SIGN UP</Title>
+                <Title mb="md">SIGN UP</Title>
                 <form onSubmit={form.onSubmit(() => navigate("/more-info"))}>
                     <TextInput
                         label="First Name"

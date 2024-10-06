@@ -8,7 +8,7 @@ const navigate = useNavigate();
     return <>
         <Center>
             <Paper shadow="xs" p="xl">
-                <Title>Terms and Conditions</Title>
+                <Title mb="md">Terms and Conditions</Title>
                 <Text>
                     Please fill out the entire form.
                 </Text>

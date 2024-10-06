@@ -11,7 +11,9 @@ const navigate = useNavigate();
     return <>
         <Center>
             <Paper shadow="xs" p="xl">
-                <Title>ERROR</Title>
+                <Center>
+                <Title mb="md">ERROR</Title>
+                </Center>
                 <CloseIcon size={20} />
                 <Text>
                     UH OH, SOMETHING WENT WRONG. PLEASE TRY AGAIN LATER.

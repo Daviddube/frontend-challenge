@@ -11,7 +11,9 @@ const navigate = useNavigate();
     return <>
         <Center>
             <Paper shadow="xs" p="xl">
-                <Title>SUCCESS!</Title>
+                <Center>
+                <Title mb="md">SUCCESS!</Title>
+                </Center>
                 <CheckIcon size={20} />
                 <Text>
                     YOU SHOULD RECEIVE A CONFIRMATION EMAIL SOON.

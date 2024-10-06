@@ -14,7 +14,7 @@ const navigate = useNavigate();
         <Center>
             <Paper shadow="xs" p="xl" pos="relative">
                 <LoadingOverlay visible={isLoading} />
-                <Title>ADDITIONAL INFO</Title>
+                <Title mb="md">ADDITIONAL INFO</Title>
                 <form onSubmit={form.onSubmit(() => navigate("/confirmation"))}>
                     <Select
                         label="Favorite color"

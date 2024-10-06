@@ -21,9 +21,9 @@ const Confirmation = () => {
 
     return <>
         <Center>
-            <Paper shadow="xs" p="xl" position="relative">
+            <Paper shadow="xs" p="xl" pos="relative">
                 <LoadingOverlay visible={mutation.isPending} />
-                <Title>CONFIRMATION</Title>
+                <Title mb="md">CONFIRMATION</Title>
                 <form onSubmit={form.onSubmit(({ name, email, password, color, terms }) => {
                     console.log('test');
                     mutation.mutate({
@@ -38,7 +38,7 @@ const Confirmation = () => {
                     <Text>E-MAIL: {form.getValues().email}</Text>
                     <Text>PASSWORD: *****</Text>
                     <Text>FAVORITE COLOR: {form.getValues().color}</Text>
-                    <Text>TERMS AND CONDITIONS: {form.getValues().terms.toString()}</Text>
+                    <Text>TERMS AND CONDITIONS: {form.getValues().terms.toString() == "true" ? "AGREED" : "NOT AGREED"}</Text>
                     <Button mt="xl" mb="xl" mr="md" variant="subtle" onClick={() => navigate("/more-info")}>
                         BACK
                     </Button>
