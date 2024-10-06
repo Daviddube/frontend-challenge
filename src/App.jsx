@@ -13,7 +13,9 @@ const App = () => {
     initialValues: {
       firstName: '',
       email: '',
-      password: ''
+      password: '',
+      favoriteColor: '',
+      areTermsAccepted: false
     },
     //  validate: {
     //   email: isEmail('Invalid email')
