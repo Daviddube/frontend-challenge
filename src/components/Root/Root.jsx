@@ -1,21 +1,17 @@
 import { Button, Center, Paper, PasswordInput, TextInput, Title } from "@mantine/core";
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { FormContext } from "../../App";
+import { useNavigate } from "react-router";
 
 const Root = () => {
-let navigate = useNavigate();
-const routeChange = () => {
-    navigate("/more-info");
-}
-
 const { form } = useContext(FormContext);
+const navigate = useNavigate();
 
     return <>
         <Center>
             <Paper shadow="xs" p="xl">
                 <Title>SIGN UP</Title>
-                <form onSubmit={form.onSubmit(routeChange)}>
+                <form onSubmit={form.onSubmit(() => navigate("/more-info"))}>
                     <TextInput
                         label="First Name"
                         placeholder="FIRST NAME"

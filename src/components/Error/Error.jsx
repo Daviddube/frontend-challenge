@@ -4,10 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FormContext } from "../../App";
 
 const Error = () => {
-    let navigate = useNavigate();
-    const routeChange = (path) => {
-        navigate(path);
-    }
+const navigate = useNavigate();
 
     const { form } = useContext(FormContext);
 
@@ -21,7 +18,7 @@ const Error = () => {
                 </Text>
                 <Button mt="xl" mb="xl" onClick={() => {
                     form.reset();
-                    routeChange("/");
+                    navigate("/");
                 }}>
                     RESTART
                 </Button>
