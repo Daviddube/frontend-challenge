@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import { MantineProvider } from "@mantine/core";
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./navigation/router";
 
 const App = () => {
   return (
-    <div>
-      <header>
-        <h1>Welcome to Upgrade challenge</h1>
-      </header>
-      <p>
-        To get started, edit <code>src/App.jsx</code> and save to reload.
-      </p>
-    </div>
+    <MantineProvider>
+      <RouterProvider router={router} />
+    </MantineProvider>
   );
 };
 
