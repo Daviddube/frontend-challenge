@@ -4,6 +4,7 @@ import Root from "../components/Root/Root";
 import AdditionalInfo from "../components/AdditionalInfo/AdditionalInfo";
 import Confirmation from "../components/Confirmation/Confirmation";
 import Success from "../components/Success/Success";
+import Error from "../components/Error/Error";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +24,10 @@ export const router = createBrowserRouter(
             <Route
                 path="success"
                 element={<Success />}
+            />
+            <Route
+                path="error"
+                element={<Error />}
             />
         </Route>
     )
