@@ -28,7 +28,7 @@ const navigate = useNavigate();
                         label={
                             <>
                                 I AGREE TO{' '}
-                                <Anchor href="/terms">
+                                <Anchor onClick={() => navigate("/terms")}>
                                     TERMS AND CONDITIONS
                                 </Anchor>
                                 .

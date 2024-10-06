@@ -5,6 +5,7 @@ import AdditionalInfo from "../components/AdditionalInfo/AdditionalInfo";
 import Confirmation from "../components/Confirmation/Confirmation";
 import Success from "../components/Success/Success";
 import Error from "../components/Error/Error";
+import Terms from "../components/Terms/Terms";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,6 +29,10 @@ export const router = createBrowserRouter(
             <Route
                 path="error"
                 element={<Error />}
+            />
+            <Route
+                path="terms"
+                element={<Terms />}
             />
         </Route>
     )
