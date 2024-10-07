@@ -10,7 +10,7 @@ To manage my state and API calls, I used Tanstack (React) Query. This allowed me
 While I didn't implement localization since it wasn't needed in this case, I could have used react-intl to create a formatted message that could take in a key to map to a translated string.
 
 ## Testing
-Testing proved to be difficult. I had less experience setting up the wrappers for Mantine and providers, so I did not have enough time to create proper tests. Had I been able to use the proper wrappers, I would have created tests for the navigation between each page, the storing of the form values and ensuring that they stayed populated between each page, and testing the success and error possibilities when submitting the form.
+Unit testing was done on each page to ensure that fields were correctly filled out. This could be enhanced to include e2e testing such as with Cypress to test out the navigation between pages as well as the form submission.
 
 ## Possible Improvements
 There are a few things that I could have improved in this solution:

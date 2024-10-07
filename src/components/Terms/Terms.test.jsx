@@ -1,11 +1,9 @@
 import React from "react";
-import { createRoot } from "react-dom/client";import Terms from "./Terms";
+import { render, screen } from "../../../test-utils";
+import Terms from "./Terms";
 ;
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  const root = createRoot(div);
-
-  root.render(<Terms />);
-  root.unmount(div);
+test("displays the terms page page", () => {
+    render(<Terms />);
+    expect(screen.getByText("TERMS AND CONDITIONS")).toBeTruthy();
 });

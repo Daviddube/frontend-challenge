@@ -1,11 +1,8 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render, screen } from "../../../test-utils";
 import Confirmation from "./Confirmation";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  const root = createRoot(div);
-
-  root.render(<Confirmation />);
-  root.unmount(div);
+test("displays the confirmation page", () => {
+    render(<Confirmation />);
+    expect(screen.getByText("CONFIRMATION")).toBeTruthy();
 });

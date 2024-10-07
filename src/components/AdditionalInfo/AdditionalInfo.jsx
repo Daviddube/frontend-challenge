@@ -17,6 +17,7 @@ const navigate = useNavigate();
                 <Title mb="md">ADDITIONAL INFO</Title>
                 <form onSubmit={form.onSubmit(() => navigate("/confirmation"))}>
                     <Select
+                        data-testid="dropdown"
                         label="Favorite color"
                         placeholder="SELECT YOUR FAVORITE COLOR"
                         data={data}
@@ -25,6 +26,7 @@ const navigate = useNavigate();
                         {...form.getInputProps('color')}
                     />
                     <Checkbox
+                    data-testid="checkbox"
                         label={
                             <>
                                 I AGREE TO{' '}
