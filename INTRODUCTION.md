@@ -16,4 +16,3 @@ Unit testing was done on each page to ensure that fields were correctly filled o
 There are a few things that I could have improved in this solution:
 - I could have made each field mandatory since they are required when submitting the form.
 - With more time, I could have used typescript to enforce types. This would have been especially useful for the colours which could have been an enum.
-- Lastly, 
